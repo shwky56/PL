@@ -1,0 +1,55 @@
+#DashHeader {
+    -fx-background-color:#f37324;
+    -fx-border-style:"outset";
+    -fx-border-radius:"25px";
+}
+
+#SignOutButton {
+    -fx-background-color:#fcb48c;
+}
+#SignOutButton:hover {
+ -fx-background-color:#fcb000;
+}
+
+#pubButton:hover {
+ -fx-background-color:#fcb000;
+}
+#InstructorInfo {
+    -fx-background-color : #f37324 ;
+ }
+ #Table {
+     -fx-background-color : #e4b49c ;
+ }
+
+ .table-view .cell{
+    -fx-cell-size: 30;
+   -fx-alignment: center-left;
+   -fx-text-fill: #000000;
+   -fx-alignment: CENTER_LEFT;
+ }
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color:  rgb(199,93,28);
+}
+.table-view .column-header .label{
+
+   -fx-text-fill: white;
+   -fx-font-weight: bold;
+   -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+   -fx-cell-size: 30;
+  -fx-alignment: center-left;
+  -fx-text-fill: #000000;
+  -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+ }
+ .table-row-cell:selected .text {
+        -fx-fill : white ;
+ }
