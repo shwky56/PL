@@ -6,35 +6,41 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class Profile {
+public class StudentCourse {
 
-    @FXML
-    private Button updateB;
 
     @FXML
     private Button backB;
 
     @FXML
-    private TextField nameF;
+    private Button updateB;
 
     @FXML
-    private TextField addressF;
+    private TableView<?> table;
 
     @FXML
-    private TextField phoneF;
+    private TableColumn<?, ?> courseName;
+
+    @FXML
+    private TableColumn<?, ?> courseId;
+
+    @FXML
+    private TableColumn<?, ?> CourseDegree;
+
+    @FXML
+    private TableColumn<?, ?> examTime;
+
     private Stage stage;
     private Scene scene;
     private Parent root;
     @FXML
-    void toHome(ActionEvent event) throws IOException {
+    void back(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("student.fxml"));
         root = loader.load();
         Student studentCont= loader.getController();
@@ -46,14 +52,15 @@ public class Profile {
     }
 
     @FXML
-    void updateProfile(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+    void update(ActionEvent event) {
+        Alert alert= new Alert(Alert.AlertType.CONFIRMATION);
         alert.setTitle("Updated");
         alert.setHeaderText("Your data has been updated successfully !");
         alert.setContentText("You successfully updated");
-        if (alert.showAndWait().get() == ButtonType.APPLY.OK) {
+        if(alert.showAndWait().get()== ButtonType.APPLY.OK) {
             System.out.println("You successfully updated");
         }
+
     }
 
 }

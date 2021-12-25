@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="532.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profx.StudentCourse">
+   <children>
+      <BorderPane prefHeight="532.0" prefWidth="722.0">
+         <left>
+            <Pane prefHeight="532.0" prefWidth="218.0" style="-fx-background-color: #ed6605;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="83.0" fitWidth="107.0" layoutX="68.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="backB" layoutY="400.0" mnemonicParsing="false" onAction="#back" prefHeight="40.0" prefWidth="218.0" stylesheets="@../../../style.css" text="Back" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="updateB" layoutX="-2.0" layoutY="292.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="220.0" stylesheets="@../../../style.css" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="391.0" prefWidth="505.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="table" layoutY="100.0" prefHeight="218.0" prefWidth="507.0" stylesheets="@../../../style.css">
+                    <columns>
+                      <TableColumn fx:id="courseName" prefWidth="156.0" text="Course Name" />
+                      <TableColumn fx:id="courseId" prefWidth="111.0" text="Course ID" />
+                        <TableColumn fx:id="CourseDegree" prefWidth="129.0" text="Course Degree" />
+                        <TableColumn fx:id="examTime" prefWidth="108.0" text="Exam Time" />
+                    </columns>
+                  </TableView>
+                  <Label alignment="CENTER" layoutY="40.0" prefHeight="42.0" prefWidth="506.0" text="Submit Your Courses">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <ChoiceBox layoutX="265.0" layoutY="395.0" prefHeight="25.0" prefWidth="167.0" />
+                  <Label layoutX="46.0" layoutY="399.0" text="Choose Your Courses :">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>

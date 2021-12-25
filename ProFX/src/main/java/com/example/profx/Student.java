@@ -31,25 +31,33 @@ public class Student implements Initializable {
     @FXML
     private Button logOutB;
     //go to profile
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
     @FXML
-    void goToProfile(ActionEvent event) {
-
+    void goToProfile(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("profile.fxml"));
+        root = loader.load();
+        Profile studentCont= loader.getController();
+        //Parent root = FXMLLoader.load(getClass().getResource("scene2.fxml"));
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     //go to course
 
-    private Stage stageB;
-    private Scene sceneB;
-    private Parent rootB;
+
     @FXML
-    void gotToCourse(ActionEvent event) throws IOException {
-       /* FXMLLoader loader = new FXMLLoader(getClass().getResource("course.fxml"));
-        rootB = loader.load();
-        Student studentCont= loader.getController();
+    void goToCousre(ActionEvent event) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("studentCourse.fxml"));
+        root = loader.load();
+        StudentCourse studentCont= loader.getController();
         //Parent root = FXMLLoader.load(getClass().getResource("scene2.fxml"));
-        stageB = (Stage) ((Node)event.getSource()).getScene().getWindow();
-        sceneB = new Scene(rootB);
-        stageB.setScene(sceneB);
-        stageB.show();*/
+        stage = (Stage) ((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
     //Table
     @FXML
@@ -77,7 +85,6 @@ public class Student implements Initializable {
 
     );
 
-    Stage stage;
     @FXML
     void logOut(ActionEvent event) {
         Alert alert= new Alert(Alert.AlertType.CONFIRMATION);
@@ -103,6 +110,4 @@ public class Student implements Initializable {
         table.setItems(list);
     }
 
-    public void goToCousre(ActionEvent actionEvent) {
-    }
 }
