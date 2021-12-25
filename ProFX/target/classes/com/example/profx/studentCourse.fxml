@@ -53,10 +53,15 @@
                         <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
-                  <ChoiceBox layoutX="265.0" layoutY="395.0" prefHeight="25.0" prefWidth="167.0" />
+                  <ChoiceBox fx:id="courseChoice" layoutX="265.0" layoutY="395.0" prefHeight="25.0" prefWidth="167.0" />
                   <Label layoutX="46.0" layoutY="399.0" text="Choose Your Courses :">
                      <font>
                         <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tf1" alignment="CENTER" layoutX="-1.0" layoutY="456.0" prefHeight="27.0" prefWidth="507.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
                      </font>
                   </Label>
                </children>

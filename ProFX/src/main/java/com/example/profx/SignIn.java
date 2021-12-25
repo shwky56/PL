@@ -61,6 +61,7 @@ public class SignIn implements Initializable {
     void userName(ActionEvent event) {
 
     }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         choice.getItems().addAll(role);

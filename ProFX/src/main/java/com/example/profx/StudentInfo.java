@@ -12,6 +12,17 @@ public class StudentInfo {
         this.examTime = examTime;
     }
 
+    public StudentInfo() {
+    }
+
+    public StudentInfo(String courseName, String courseId, int maxCourseGrade, int examTime) {
+        this.courseName = courseName;
+        this.courseId = courseId;
+        this.maxCourseGrade = maxCourseGrade;
+        this.examTime = examTime;
+    }
+
+
     public String getCourseName() {
         return courseName;
     }
@@ -50,5 +61,8 @@ public class StudentInfo {
 
     public void setExamTime(int examTime) {
         this.examTime = examTime;
+    }
+
+    public void add(StudentInfo studentInfo) {
     }
 }
