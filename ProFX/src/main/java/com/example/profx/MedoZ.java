@@ -13,7 +13,7 @@ import java.io.IOException;
 public class MedoZ extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("signIn.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("courseHome.fxml"));
         Scene scene = new Scene(root);
         stage.setTitle("MedoZ");
         stage.setScene(scene);
