@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="an" prefHeight="793.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profx.CourseHome">
+   <children>
+      <BorderPane prefHeight="793.0" prefWidth="1082.0">
+         <left>
+            <Pane prefHeight="793.0" prefWidth="210.0" style="-fx-background-color: #ed6605;" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="instractorB" layoutY="377.0" mnemonicParsing="false" onAction="#goToInstrucor" prefHeight="40.0" prefWidth="210.0" stylesheets="@../../../style.css" text="Instructor" textFill="#fcf7f7">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font></Button>
+                  <Button fx:id="studentB" layoutY="462.0" mnemonicParsing="false" onAction="#goToStudent" prefHeight="40.0" prefWidth="209.0" stylesheets="@../../../style.css" text="Student" textFill="#f7f4f4">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="logoutB" layoutY="540.0" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="209.0" stylesheets="@../../../style.css" text="Log Out" textFill="#faf9f9">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="93.0" fitWidth="110.0" layoutX="58.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="793.0" prefWidth="881.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TableView fx:id="table" layoutY="2.0" prefHeight="384.0" prefWidth="883.0" stylesheets="@../../../style.css">
+                    <columns>
+                      <TableColumn fx:id="courseName" prefWidth="116.0" text="Course Name" />
+                      <TableColumn fx:id="courseId" prefWidth="96.0" text="Course ID" />
+                        <TableColumn fx:id="courseDegree" prefWidth="92.0" text="Course Degree" />
+                        <TableColumn fx:id="room" prefWidth="85.0" text="Room" />
+                        <TableColumn fx:id="instructor" prefWidth="106.0" text="Instructor Name" />
+                        <TableColumn fx:id="price" prefWidth="69.0" text="Price" />
+                        <TableColumn fx:id="startDay" prefWidth="97.0" text="Start Day" />
+                        <TableColumn fx:id="endDay" prefWidth="108.0" text="End Day" />
+                        <TableColumn fx:id="numberOfDays" prefWidth="113.0" text="Number of Days" />
+                    </columns>
+                  </TableView>
+                  <Pane layoutX="1.0" layoutY="380.0" prefHeight="412.0" prefWidth="879.0" style="-fx-background-color: #2185d1;">
+                     <children>
+                        <Pane layoutY="-7.0" prefHeight="413.0" prefWidth="880.0" style="-fx-background-color: #db8700;">
+                           <children>
+                              <TextField fx:id="courseNameTF" layoutX="105.0" layoutY="45.0" prefHeight="32.0" prefWidth="152.0" promptText="Course Name" />
+                              <TextField fx:id="courseIdTF" layoutX="364.0" layoutY="45.0" prefHeight="32.0" prefWidth="152.0" promptText="Course ID" />
+                              <TextField fx:id="instructorTF" layoutX="634.0" layoutY="45.0" prefHeight="32.0" prefWidth="152.0" promptText="Instructor Name" />
+                              <TextField fx:id="priceTF" layoutX="105.0" layoutY="116.0" prefHeight="32.0" prefWidth="152.0" promptText="Price" />
+                              <TextField fx:id="gradesTF" layoutX="364.0" layoutY="116.0" prefHeight="32.0" prefWidth="152.0" promptText="Grades" />
+                              <TextField fx:id="numberOfDaysTF" layoutX="634.0" layoutY="187.0" prefHeight="32.0" prefWidth="152.0" promptText="Numbr of Days" />
+                              <TextField fx:id="startDayTF" layoutX="105.0" layoutY="187.0" prefHeight="32.0" prefWidth="152.0" promptText="Start Day" />
+                              <TextField fx:id="roomTF" layoutX="634.0" layoutY="116.0" prefHeight="32.0" prefWidth="152.0" promptText="Room" />
+                              <TextField fx:id="endDayTF" layoutX="364.0" layoutY="187.0" prefHeight="32.0" prefWidth="152.0" promptText="End Day" />
+                              <Button fx:id="createB" layoutX="346.0" layoutY="277.0" mnemonicParsing="false" onAction="#create" prefHeight="40.0" prefWidth="103.0" text="Create">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="deleteB" layoutX="503.0" layoutY="277.0" mnemonicParsing="false" onAction="#delete" prefHeight="40.0" prefWidth="103.0" text="Delete ">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="updateB" layoutX="652.0" layoutY="277.0" mnemonicParsing="false" onAction="#update" prefHeight="40.0" prefWidth="103.0" text="Update">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
