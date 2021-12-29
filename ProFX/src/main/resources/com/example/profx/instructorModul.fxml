@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ankholy" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="693.0" prefWidth="1018.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.profx.InstructorModul">
+    <children>
+        <AnchorPane layoutX="14.0" layoutY="14.0" prefHeight="88.0" prefWidth="985.0">
+            <children>
+
+                <Pane id="DashHeader" fx:id="DashHeader" prefHeight="88.0" prefWidth="583.0" stylesheets="@../../../App.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <children>
+                        <Pane layoutX="42.0" layoutY="26.0" />
+                        <Label alignment="CENTER" layoutX="7.0" layoutY="3.0" prefHeight="66.0" prefWidth="807.0" text="Instructor Dashboard">
+                            <font>
+                                <Font name="Lucida Bright Demibold" size="21.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="SignOutButton" layoutX="831.0" layoutY="27.0" mnemonicParsing="false" onAction="#signOut" prefHeight="35.0" prefWidth="129.0" stylesheets="/App.css" text="Sign Out" textOverrun="CLIP">
+                            <font>
+                                <Font name="Verdana Italic" size="14.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <effect>
+                                <DropShadow />
+                            </effect>
+                        </Button>
+                        <ImageView fx:id="BigLogo1" fitHeight="23.0" fitWidth="21.0" layoutX="264.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../images.png" />
+                            </image>
+                        </ImageView>
+                    </children>
+                </Pane>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="Table" layoutX="359.0" layoutY="142.0" prefHeight="394.0" prefWidth="618.0" stylesheets="@../../../App.css">
+            <columns>
+                <TableColumn fx:id="stdNAME" prefWidth="149.5999813079834" text="Student Name" />
+                <TableColumn fx:id="stdID" prefWidth="133.0" text="Student ID" />
+                <TableColumn fx:id="coursNAME" prefWidth="178.0" text="Course Name" />
+                <TableColumn fx:id="StdGrade" prefWidth="241.0" text="             Grades" />
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="359.0" layoutY="117.0" prefHeight="23.0" prefWidth="618.0" text="- Students list" textFill="#c75d1c">
+            <font>
+                <Font name="Lucida Bright Demibold Italic" size="18.0" />
+            </font>
+        </Label>
+        <Pane fx:id="InstructorInfo" layoutX="15.0" layoutY="118.0" prefHeight="544.0" prefWidth="337.0" style="-fx-background-color: #f37324;">
+            <children>
+                <Label alignment="CENTER" layoutX="1.0" layoutY="3.0" prefHeight="23.0" prefWidth="337.0" text="Instructor Information">
+                    <font>
+                        <Font name="Lucida Bright Demibold" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="104.0" prefHeight="23.0" prefWidth="84.0" text="Name :" textFill="WHITE">
+                    <font>
+                        <Font name="Lucida Bright Demibold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="4.0" layoutY="148.0" prefHeight="23.0" prefWidth="120.0" text="Department :" textFill="WHITE">
+                    <font>
+                        <Font name="Lucida Bright Demibold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="10.0" layoutY="182.0" prefHeight="23.0" prefWidth="84.0" text="Email :" textFill="WHITE">
+                    <font>
+                        <Font name="Lucida Bright Demibold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="7.0" layoutY="222.0" prefHeight="23.0" prefWidth="74.0" text="Phone :" textFill="WHITE">
+                    <font>
+                        <Font name="Lucida Bright Demibold" size="18.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="getName" layoutX="112.0" layoutY="103.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #f37324;">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="getDepartment" layoutX="121.0" layoutY="147.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: #f37324;">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="getEmail" layoutX="121.0" layoutY="181.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #f37324;">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="getPhone" layoutX="114.0" layoutY="221.0" prefHeight="25.0" prefWidth="214.0" style="-fx-background-color: #f37324;">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="getAddress" layoutX="121.0" layoutY="260.0" prefHeight="25.0" prefWidth="207.0" style="-fx-background-color: #f37324;">
+                    <font>
+                        <Font name="Segoe UI Semibold" size="12.0" />
+                    </font>
+                </TextField>
+                <Label layoutX="4.0" layoutY="261.0" prefHeight="23.0" prefWidth="110.0" text="Address :" textFill="WHITE">
+                    <font>
+                        <Font name="Lucida Bright Demibold" size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fx:id="BigLogo" fitHeight="161.0" fitWidth="155.0" layoutX="91.0" layoutY="363.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../images.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Label fx:id="promptMSG" alignment="CENTER" layoutX="272.0" layoutY="504.0" prefHeight="23.0" prefWidth="447.0" textFill="#c75d1c">
+            <font>
+                <Font name="Lucida Bright Demibold" size="12.0" />
+            </font>
+        </Label>
+        <Circle layoutX="614.0" layoutY="129.0" radius="4.0" stroke="WHITE" strokeType="INSIDE" />
+      <Pane layoutX="359.0" layoutY="549.0" prefHeight="113.0" prefWidth="618.0" style="-fx-background-color: #f37324;">
+         <children>
+            <TextField fx:id="tf1" layoutX="26.0" layoutY="21.0" onAction="#tfGrade" prefHeight="35.0" prefWidth="197.0" promptText="Grade" />
+            <Button fx:id="addB" layoutX="385.0" layoutY="21.0" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="197.0" stylesheets="@../../../App.css" text="ADD">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+              <Button fx:id="pubButton" layoutY="85.0" mnemonicParsing="false" onAction="#display" prefHeight="28.0" prefWidth="618.0" style="-fx-background-color: #c75d1c;" stylesheets="/App.css" text="PUBLISH GRADES" textFill="WHITE" textOverrun="CLIP">
+                  <font>
+                      <Font name="Verdana Italic" size="14.0" />
+                  </font>
+                  <cursor>
+                      <Cursor fx:constant="HAND" />
+                  </cursor>
+                  <effect>
+                      <InnerShadow />
+                  </effect>
+              </Button>
+         </children>
+      </Pane>
+
+    </children>
+
+</AnchorPane>
